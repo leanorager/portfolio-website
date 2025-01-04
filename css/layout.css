@@ -134,3 +134,48 @@ h1 {
 .projekt a :hover {
   color: var(--green-color);
 }
+
+/* 02_WEB-SIDE */
+h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.macbook {
+  display: none;
+}
+
+.flex {
+  margin: 80px auto 0px;
+  width: 300px;
+}
+
+.grid_1-1-1 {
+  display: grid;
+}
+
+.order-1 {
+  order: -3;
+}
+
+.margin-ekstra {
+  margin-top: 40px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* 03_UX-SIDE */
+.grid_1-1 {
+  display: grid;
+}
