@@ -8,3 +8,72 @@ html {
   --green-color: #1c9f59;
   --rosa-color: #ddb5b0;
 }
+
+/* UNIVERS-FONT */
+@font-face {
+  font-family: "universregular";
+  src: url("../univers-font/universregular-webfont.woff2") format("woff2"), url("../univers-font/universregular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "universbold";
+  src: url("../univers-font/universbold-webfont.woff2") format("woff2"), url("../univers-font/universbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* MOBILSITE */
+
+/* GENEREL STYLING AF TEKST */
+h1 {
+  font-family: "Chonburi";
+  font-weight: 400;
+  font-size: 45px;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-family: "Chonburi";
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-family: "Chonburi";
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+p,
+ul,
+li {
+  font-family: "universregular";
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* DESKTOP */
+@media (min-width: 850px) {
+  /* GENEREL STYLING AF TEKST */
+  h1 {
+    font-size: 100px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p,
+  ul,
+  li {
+    font-size: 18px;
+  }
+}
