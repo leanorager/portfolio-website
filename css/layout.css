@@ -179,3 +179,8 @@ ul {
 .grid_1-1 {
   display: grid;
 }
+
+.ai-billeder {
+  width: 300px;
+  margin: 20px auto;
+}
