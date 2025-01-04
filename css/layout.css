@@ -12,7 +12,7 @@ video {
   display: block;
 }
 
-/* Menu og burgermenu */
+/* MENU OG BURGERMENU */
 header {
   position: sticky;
   top: 0;
@@ -97,4 +97,20 @@ header {
   nav.active .menu a {
     font-size: 15px;
   }
+}
+
+/* FORSIDE */
+
+/* CTA-KNAP OG PIL */
+.cta a {
+  text-decoration: none;
+  color: #800000;
+  position: relative;
+}
+
+.cta a::before {
+  content: "\2192"; /* Unicode for pil → */
+  font-size: 1rem; /* Justér størrelsen */
+  margin-right: 5px; /* Lidt afstand mellem pilen og teksten */
+  color: #800000;
 }
