@@ -1,0 +1,10 @@
+/* COLOR-VARIABLE */
+html {
+  --primary-color: #6a0225;
+  --secondary-color: #9b0437;
+  --background-color: #f2f2f2;
+  --text-color: #3c3937;
+  --footer-color: #e4e4e4;
+  --green-color: #1c9f59;
+  --rosa-color: #ddb5b0;
+}
