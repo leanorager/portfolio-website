@@ -25,7 +25,9 @@ html {
 }
 
 /* MOBILSITE */
-
+body {
+  background-color: var(--background-color);
+}
 /* GENEREL STYLING AF TEKST */
 h1 {
   font-family: "Chonburi";
@@ -50,10 +52,33 @@ h3 {
 
 p,
 ul,
-li {
+li,
+a {
   font-family: "universregular";
   font-size: 16px;
   color: var(--text-color);
+}
+
+/* CTA-KNAP OG PIL */
+.cta a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.cta a::before {
+  content: "\2192"; /* Unicode for pil → */
+  font-size: 1rem; /* Justér størrelsen */
+  margin-right: 5px; /* Lidt afstand mellem pilen og teksten */
+  color: var(--secondary-color);
+}
+
+.cta a span {
+  text-decoration: underline; /* Understreg kun teksten */
+}
+
+.cta a :hover {
+  color: var(--green-color);
 }
 
 /* DESKTOP */
