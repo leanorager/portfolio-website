@@ -102,6 +102,44 @@ header {
     font-size: 15px;
   }
 }
+/* FOOTER */
+footer {
+  background-color: var(--footer-color);
+  padding: 20px;
+  text-align: left;
+  font-family: "universregular";
+  color: var(--text-color);
+}
+
+footer h3 {
+  padding-bottom: 10px;
+}
+
+/* flex containeren for kontakt */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.contact-item:hover p {
+  color: var(--green-color);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.contact-item p {
+  margin: 0;
+}
 
 /* MOBILE-FIRST */
 
