@@ -32,6 +32,17 @@ header {
   margin: 5px;
 }
 
+.logo-hover {
+  display: none;
+}
+.logo:hover .logo-first {
+  display: none;
+}
+
+.logo:hover .logo-hover {
+  display: block;
+}
+
 .menu {
   display: flex;
   list-style: none;
