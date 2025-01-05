@@ -173,9 +173,6 @@ h1 {
   gap: 20px;
 }
 
-.projekt img {
-}
-
 .projekt a {
   text-decoration: none;
 }
@@ -523,6 +520,7 @@ main ul {
     gap: 50px;
     margin-bottom: 50px;
     align-items: center;
+    min-height: 600px;
   }
   .indhold-grid2 .order-1 {
     order: 0;
