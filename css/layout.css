@@ -153,10 +153,18 @@ h1 {
   margin-bottom: 15px;
 }
 
+.lottie {
+  display: none;
+}
+
 .cta {
   text-align: end;
   margin-top: 10px;
   margin-bottom: 80px;
+}
+
+.projekt-section h2 {
+  text-align: center;
 }
 
 .grid_1-1_til_1-1-1-1 {
@@ -258,6 +266,14 @@ main ul {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
+  }
+
+  .herosection {
+    padding-top: 0;
+  }
+
+  .lottie {
+    display: block;
   }
 
   .projekt-section h2 {
@@ -490,6 +506,7 @@ main ul {
     order: 0;
     word-break: break-word;
   }
+
   .indhold-grid h1,
   .indhold-grid .cta {
     text-align: left;
