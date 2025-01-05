@@ -171,7 +171,7 @@ h3 {
   margin-top: 40px;
 }
 
-ul {
+main ul {
   margin-left: 20px;
 }
 
@@ -183,4 +183,14 @@ ul {
 .ai-billeder {
   width: 300px;
   margin: 20px auto;
+}
+
+/* 04_ANIMATION-SIDE */
+.grid_2-1 {
+  display: grid;
+}
+
+.disco {
+  width: 300px;
+  margin: 0px auto 10px;
 }
