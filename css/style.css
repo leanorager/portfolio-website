@@ -28,6 +28,9 @@ html {
 body {
   background-color: var(--background-color);
 }
+video {
+  filter: grayscale(100%);
+}
 /* GENEREL STYLING AF TEKST */
 h1 {
   font-family: "Chonburi";
