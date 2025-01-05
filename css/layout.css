@@ -194,3 +194,9 @@ main ul {
   width: 300px;
   margin: 0px auto 10px;
 }
+
+/* 05_INDHOLD-SIDE */
+.grid_1-1 .col {
+  display: flex;
+  flex-direction: column;
+}
