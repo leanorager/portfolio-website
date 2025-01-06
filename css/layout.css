@@ -294,6 +294,18 @@ main ul {
   flex-direction: column;
 }
 
+/* OM MIG */
+.bold {
+  font-family: "universbold";
+  padding-top: 20px;
+}
+.light {
+  color: var(--rosa-color);
+}
+.cv-grid p {
+  margin: 0px;
+}
+
 /* DESKTOP */
 @media (min-width: 850px) {
   /* FORSIDE */
@@ -574,4 +586,6 @@ main ul {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
   }
+
+  /* OM MIG */
 }
