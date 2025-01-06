@@ -113,11 +113,11 @@ header {
     font-size: 15px;
   }
 }
+
 /* FOOTER */
 footer {
   background-color: var(--footer-color);
   padding: 20px;
-  text-align: left;
   font-family: "universregular";
   color: var(--text-color);
 }
@@ -126,7 +126,14 @@ footer h3 {
   padding-bottom: 10px;
 }
 
-/* flex containeren for kontakt */
+/* Flex-container for kontakt og sociale medier */
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Fordeler kontakt og sociale medier */
+  align-items: flex-start;
+}
+
+/* Kontaktoplysninger */
 .contact {
   display: flex;
   flex-direction: column;
@@ -148,8 +155,33 @@ footer h3 {
   margin-right: 10px;
 }
 
+.contact-item img {
+  transition: transform 0.3s ease; /* Animation ved hover */
+}
+
+.contact-item:hover img {
+  transform: scale(1.1); /* Lidt større ved hover */
+}
+
 .contact-item p {
   margin: 0;
+}
+
+/* Sociale medier */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icon img {
+  width: 30px; /* Størrelse på ikonerne */
+  height: 30px;
+  transition: transform 0.3s ease; /* Animation ved hover */
+}
+
+.social-icon:hover img {
+  transform: scale(1.1); /* Lidt større ved hover */
 }
 
 /* MOBILE-FIRST */
