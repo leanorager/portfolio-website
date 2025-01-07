@@ -230,6 +230,9 @@ h1 {
 }
 
 /* 02_WEB-SIDE */
+.web-grid h1 {
+  margin-top: 10px;
+}
 h2 {
   margin-top: 10px;
   margin-bottom: 5px;
