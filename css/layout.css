@@ -214,6 +214,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  margin-bottom: 50px;
 }
 
 .projekt a {
@@ -784,15 +785,15 @@ main ul {
   /* Animation */
   @keyframes flyt-horisontalt {
     0% {
-      transform: translateX(112%);
+      transform: translateX(110%);
     }
     100% {
-      transform: translateX(-70%);
+      transform: translateX(-60%);
     }
   }
 
   .kontakt-flyv {
-    animation: flyt-horisontalt 15s linear infinite;
+    animation: flyt-horisontalt 20s linear infinite;
   }
 
   .cv-grid {
@@ -801,6 +802,9 @@ main ul {
     gap: 50px;
     margin: 0px auto 100px;
     max-width: 1100px;
+  }
+  .cv-section3 {
+    border-bottom: none;
   }
   .cv-section3 h2 {
     text-align: center;
