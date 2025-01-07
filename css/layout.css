@@ -1,0 +1,773 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MENU OG BURGERMENU */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15px;
+  align-items: center; /* vertikal centrering */
+  font-size: 16px;
+  background-color: var(--primary-color);
+}
+
+.logo img {
+  max-width: 90px; /* Fast bredde vigtigt*/
+  height: auto;
+  margin: 5px;
+}
+.logo-hover {
+  display: none;
+}
+.logo:hover .logo-first {
+  display: none;
+}
+.logo:hover .logo-hover {
+  display: block;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 60px; /* mellem menupunkterne */
+}
+.menu a {
+  display: block;
+  color: var(--background-color);
+  text-decoration: none;
+}
+.menu a:hover {
+  color: var(--green-color);
+}
+.burger {
+  width: 30px;
+  height: 20px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--background-color);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .menu {
+    display: none;
+  }
+  .logo img {
+    max-width: 70px; /* Fast bredde vigtigt*/
+  }
+  .burger {
+    display: block;
+  }
+
+  /* burger-linjernes classes der kaldes i js */
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  } /* En linje drejer 45 grader, 5px til højre (X-aksen) og 5px nedad (Y-aksen)*/
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  } /* En linje bliver usynlig */
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  } /* En linje drejer 45 grader, 5px til højre (X-aksen) og 5px nedad (Y-aksen)*/
+
+  /* drop-down-menuens classes der kaldes i js*/
+  nav.active .menu {
+    display: block;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  /* menupunkternes classes der kaldes i js*/
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+  nav.active .menu a {
+    font-size: 15px;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--footer-color);
+  padding: 20px;
+  font-family: "universregular";
+  color: var(--text-color);
+}
+
+footer h3 {
+  padding-bottom: 10px;
+}
+
+/* Flex-container for kontakt og sociale medier */
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Fordeler kontakt og sociale medier */
+  align-items: flex-start;
+}
+
+/* Kontaktoplysninger */
+.contact {
+  display: flex;
+  flex-direction: column; /* flexer de to kontaktmuligheder fra hinanden i kolonne */
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center; /* flexer så ikon og tekst er centreret vertikalt */
+  text-decoration: none;
+}
+
+.contact-item:hover p {
+  color: var(--green-color);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* størrelse på ikoner og mellemrum hen til tekst */
+}
+
+.contact-item img {
+  transition: transform 0.3s ease; /* Animation ved hover */
+}
+
+.contact-item:hover img {
+  transform: scale(1.1); /* Lidt større ved hover */
+}
+
+.contact-item p {
+  margin: 0; /* fjerner margin, der var i forvejen */
+}
+
+/* Sociale medier */
+.social-media {
+  display: flex;
+  flex-direction: column; /* flexer de to sociale medier fra hinanden i kolonne */
+  gap: 10px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px; /* størrelse på ikonerne */
+  transition: transform 0.3s ease; /* animation ved hover */
+}
+
+.social-icon:hover img {
+  transform: scale(1.1); /* Lidt større ved hover */
+}
+
+/* MOBILE-FIRST */
+
+/* FORSIDE */
+main {
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.lottie {
+  display: none;
+}
+
+.cta {
+  text-align: end; /* højrestillet */
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+
+.projekt-section h2 {
+  text-align: center;
+}
+
+.grid_1-1_til_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.projekt a {
+  text-decoration: none;
+}
+
+.projekt a :hover {
+  color: var(--green-color);
+}
+
+/* 02_WEB-SIDE */
+.web-grid h1 {
+  margin-top: 10px;
+}
+h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.macbook {
+  display: none;
+}
+
+.flex /* billede */ {
+  margin: 80px auto 0px;
+  width: 300px;
+}
+
+.grid_1-1-1 {
+  display: grid; /* for at kunne ændre på order */
+}
+
+.order-1 /* class for alle der skal rykkes 1 baglæns */ {
+  order: -1;
+}
+
+.margin-ekstra /* primært h2'ere, der mangler margin-top */ {
+  margin-top: 40px;
+}
+
+main ul {
+  margin-left: 20px; /* så listernes punker også rykker ind */
+}
+
+/* 03_UX-SIDE */
+.grid_1-1 {
+  display: grid; /* for at kunne ændre på order */
+}
+
+.ai-billeder {
+  width: 300px;
+  margin: 20px auto;
+}
+
+/* 04_ANIMATION-SIDE */
+.grid_2-1 {
+  display: grid; /* for at kunne ændre på order */
+}
+
+.disco {
+  width: 300px;
+  margin: 0px auto 10px;
+}
+
+.black {
+  filter: grayscale(100%);
+}
+
+/* 05_INDHOLD-SIDE */
+.grid_1-1 .col {
+  display: flex;
+  flex-direction: column; /* for at kunne ændre på order */
+}
+
+/* OM MIG */
+.cv-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw; /* Begrænser containerens bredde til viewporten */
+  height: auto;
+}
+.image-container {
+  width: 300px;
+  margin: 0px auto 10px;
+}
+
+/* Flyvende ikoner */
+.kontakt-flyv {
+  display: flex;
+  gap: 60px; /* mellem ikonerne */
+  align-items: center; /* vertikalt */
+  position: relative; /* for animationens placering */
+  /* overflow: hidden; */
+  max-width: 100vw; /* viewport */
+  width: 100%;
+  height: 100px;
+}
+.flyv-ikon {
+  width: 50px;
+  height: 50px; /* størrelse */
+}
+
+.flyv-ikon:hover {
+  transform: scale(1.2); /* lidt større ved hover */
+}
+
+/* Animation */
+@keyframes flyt-horisontalt {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(-120%);
+  } /* hvor den rykker sig på X-aksen */
+}
+
+.kontakt-flyv {
+  animation: flyt-horisontalt 15s linear infinite; /* animation name, duration, direction og iteration count  */
+}
+
+/* CV */
+.cv-grid p {
+  margin: 0px;
+}
+
+.less-padding {
+  padding-top: 0px;
+}
+
+.cv-section3 h2 {
+  text-align: center;
+}
+
+/* "GALLERI" lavet i desktopfirst */
+.galleri {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* vertikalt */
+  max-width: 1200px;
+  position: relative;
+  margin: 20px auto 100px;
+  padding: 0px 35px; /* så pilene kan "stikke ud over" */
+}
+
+.right-arrow::before {
+  content: "\2192"; /* unicode for pil → */
+  font-size: 2rem; /* størrelsen på pilen*/
+  color: var(--background-color);
+}
+
+.left-arrow::before {
+  content: "\2190"; /* unicode for omvendt pil */
+  font-size: 2rem; /* størrelsen på pilen*/
+  color: var(--background-color);
+}
+
+.left-arrow,
+.right-arrow {
+  top: 40%;
+  background-color: var(--primary-color);
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%; /* cirkel */
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(50%); /* flytter 50% af egen størrelse på y-aksen (vertikalt) */
+  margin: 0px 20px; /* fra cirkel ud til kant */
+}
+
+.left-arrow {
+  left: -15px; /* placerer -15px uden for .galleri */
+}
+
+.right-arrow {
+  right: -15px; /* placerer -15px uden for .galleri */
+}
+
+.galleri .carousel {
+  display: inline-flex; /* billederne i vandret linje. Inline-element kan placeres ved siden af andre elementer */
+  white-space: nowrap; /* så billederne ikke går ned på næste linje, når der ikke er plads */
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  /* Gør scrolling glat */
+}
+
+.carousel img {
+  aspect-ratio: 6/10;
+  object-fit: cover;
+  margin-left: 20px; /* mellemrum mellem billederne */
+  width: calc(100% / 3); /* billedets bredde bliver sat til en tredjedel af dens parent's bredde */
+}
+
+.carousel img:first-child {
+  margin-left: 0px; /* fjerner "mellemrummet" på venstre billede */
+}
+
+@media screen and (max-width: 850px) {
+  .galleri img {
+    width: calc(100% / 2);
+    /* billedets bredde bliver sat til halvdelen af dens parent's bredde */
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .galleri img {
+    width: 100%;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 850px) {
+  /* FORSIDE */
+  main {
+    margin: 0px;
+  }
+
+  section {
+    border-bottom: 2px solid var(--primary-color); /* border mellem sections */
+    padding: 50px 100px 0px; /* udgangspunkt for padding */
+  }
+  section:last-child {
+    border-bottom: none; /* ingen border inden footer */
+  }
+
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .herosection {
+    padding-top: 0;
+  }
+
+  .lottie {
+    display: block;
+  }
+
+  /* 02_WEB-SIDE */
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .web-grid {
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+  .web-grid img {
+    order: 0;
+  }
+  .web-grid h1,
+  .web-grid .cta {
+    text-align: left;
+  }
+  .web-grid .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* placerer h1 og cta nederst i kolonnen */
+  }
+
+  .web-grid2 {
+    gap: 100px;
+    margin: 50px 0px 100px;
+  }
+  .macbook {
+    display: block;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .web-grid3 {
+    gap: 20px;
+    padding: 50px 0px 100px;
+  }
+  .web-grid3 img {
+    margin: 0px;
+    order: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .flex /* billede */ {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section4 {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+  .web-grid4 {
+    gap: 30px;
+  }
+  .section4 h2 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  main li {
+    margin-bottom: 8px;
+  }
+
+  /* 03_UX-SIDE */
+  .grid_3-1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  .grid_3-1 .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .grid_3-1 .cta {
+    margin-bottom: 30px;
+  }
+
+  .ux-grid2 {
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .ux-grid2 .order-1 {
+    order: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ux-grid2 .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .ux-grid3 {
+    margin-bottom: 50px;
+  }
+
+  .ux-grid4 {
+    gap: 30px;
+  }
+
+  /* 04_ANIMATION-SIDE */
+  .animation-section {
+    padding-top: 0px;
+  }
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .animation-grid {
+    margin-bottom: 150px;
+  }
+  .animation-grid .order-1 {
+    order: 0;
+  }
+  .animation-grid .cta,
+  .animation-grid h1 {
+    text-align: left;
+    grid-column: 1 / 2;
+  }
+  .animation-grid h1 {
+    padding-top: 50px;
+    word-break: break-word;
+  }
+
+  .animation-grid2 {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .animation-grid2 img {
+    order: 0;
+    grid-column: 2 / span 4;
+    grid-row: 1/3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .animation-grid2 .col1 {
+    grid-row: 2 / span 2;
+    align-self: end; /* får teksten ned til bunden */
+  }
+  .animation-grid2 .col2 {
+    grid-column: 2;
+  }
+
+  .animation-grid3 {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .animation-grid4 {
+    gap: 30px;
+  }
+
+  /* 05_INDHOLD-SIDE */
+  .indhold-grid {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .indhold-grid .order-1 {
+    order: 0;
+    word-break: break-word;
+  }
+  .indhold-grid h1,
+  .indhold-grid .cta {
+    text-align: left;
+  }
+  .indhold-grid .cta {
+    margin-bottom: 0px;
+  }
+
+  .indhold-grid2 {
+    gap: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    min-height: 600px;
+  }
+  .indhold-grid2 .order-1 {
+    order: 0;
+  }
+
+  .indhold-grid4 {
+    gap: 30px;
+  }
+
+  /* OM MIG */
+  /* Sektion layout */
+  .cv-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* gør det muligt for .text-container og .image-container at bruge absolute */
+    width: 100%;
+    margin: 0 auto; /* centrerer div'en i midten */
+    height: 625px;
+  }
+
+  /* Tekst container */
+  .text-container {
+    position: absolute;
+    z-index: 2;
+    bottom: 0%;
+    left: 50%; /* flytter teksten til bunden og midten */
+    transform: translate(-50%, -50%); /* Flytter teksten tilbage for fuld centrering */
+    text-align: center;
+    max-width: 1100px;
+  }
+
+  .text-container h1 {
+    letter-spacing: 7px;
+    white-space: nowrap; /*Sørger for, at teksten ikke brydes */
+    position: relative; /* gør det muligt at justere teksten i forhold til dens normale position */
+    color: var(--rosa-color);
+    margin-bottom: 0px;
+  }
+
+  /* Billed container */
+  .image-container {
+    position: absolute;
+    width: 472px; /* Bredden på billedet */
+    height: auto;
+    overflow: hidden; /* skjuler overskydende tekst */
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* billedet placeres bag teksten */
+  }
+
+  /* Specifik styling for overlap */
+  .overflow {
+    color: var(--primary-color);
+  }
+
+  .cv-section p {
+    max-width: 800px;
+    margin: 0px auto;
+  }
+
+  /* Animation */
+  @keyframes flyt-horisontalt {
+    0% {
+      transform: translateX(110%);
+    }
+    100% {
+      transform: translateX(-60%);
+    }
+  }
+
+  .kontakt-flyv {
+    animation: flyt-horisontalt 20s linear infinite;
+  }
+
+  .cv-grid {
+    gap: 50px;
+    margin: 0px auto 100px;
+    max-width: 1100px;
+  }
+  .cv-section3 h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 990px) {
+  /* FORSIDE PROJEKTER */
+  .projekt-section h2 {
+    text-align: center;
+  }
+
+  .grid_1-1_til_1-1-1-1 {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 40px 0px 100px;
+    gap: 0px;
+  }
+
+  .grid_1-1_til_1-1-1-1 .projekt {
+    border-right: 2px solid var(--primary-color);
+  }
+
+  .grid_1-1_til_1-1-1-1 .projekt:last-child {
+    border-right: none;
+  }
+
+  .projekt img {
+    padding: 20px;
+  }
+}
