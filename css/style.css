@@ -62,6 +62,15 @@ a {
   color: var(--text-color);
 }
 
+/* CV */
+.bold {
+  font-family: "universbold";
+  padding-top: 20px;
+}
+.light {
+  color: var(--rosa-color);
+}
+
 /* CTA-KNAP OG PIL */
 .cta a {
   text-decoration: none;
