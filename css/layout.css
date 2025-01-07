@@ -295,6 +295,43 @@ main ul {
 }
 
 /* OM MIG */
+.image-container {
+  width: 300px;
+  margin: 0px auto 10px;
+}
+
+.kontakt-flyv {
+  display: flex;
+  gap: 60px;
+  align-items: center; /* vertikalt */
+  position: relative; /* For animationens placering */
+  width: 100%;
+  height: 100px;
+}
+
+.flyv-ikon {
+  width: 50px;
+  height: 50px;
+}
+
+.flyv-ikon:hover {
+  transform: scale(1.2);
+}
+
+/* Animation */
+@keyframes flyt-horisontalt {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.kontakt-flyv {
+  animation: flyt-horisontalt 15s linear infinite;
+}
+
 .bold {
   font-family: "universbold";
   padding-top: 20px;
@@ -588,4 +625,58 @@ main ul {
   }
 
   /* OM MIG */
+  /* Sektion layout */
+  .cv-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 625px; /*Tilpas højden efter behov */
+  }
+
+  /* Tekst container */
+  .text-container {
+    position: absolute;
+    z-index: 2;
+    bottom: 0%; /* Centrerer vertikalt */
+    left: 50%; /* Starter fra midten */
+    transform: translate(-50%, -50%); /* Flytter teksten tilbage for fuld centrering */
+    text-align: center;
+    max-width: 1100px;
+  }
+
+  .text-container h1 {
+    letter-spacing: 7px; /* 6% letter-spacing */
+    white-space: nowrap; /*Sørger for, at teksten ikke brydes */
+    position: relative;
+    color: var(--rosa-color);
+    margin-bottom: 0px;
+  }
+
+  /* Billed container */
+  .image-container {
+    position: absolute;
+    width: 472px; /* Bredden på billedet */
+    height: auto;
+    overflow: hidden; /* Skjuler overskydende tekst på billedområdet */
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  /* Specifik styling for overlap */
+  .overflow {
+    color: var(--primary-color);
+  }
+
+  .cv-section p {
+    max-width: 1100px;
+  }
 }
