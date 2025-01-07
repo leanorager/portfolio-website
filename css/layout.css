@@ -469,30 +469,8 @@ main ul {
     display: block;
   }
 
-  .projekt-section h2 {
-    text-align: center;
-  }
-
   .projekt-section {
     border-bottom: none;
-  }
-
-  .grid_1-1_til_1-1-1-1 {
-    grid-template-columns: repeat(4, 1fr);
-    margin: 40px 0px 100px;
-    gap: 0px;
-  }
-
-  .grid_1-1_til_1-1-1-1 .projekt {
-    border-right: 2px solid var(--primary-color);
-  }
-
-  .grid_1-1_til_1-1-1-1 .projekt:last-child {
-    border-right: none;
-  }
-
-  .projekt img {
-    padding: 20px;
   }
 
   /* 02_WEB-SIDE */
@@ -593,8 +571,8 @@ main ul {
 
   .ux-grid2 .order-1 {
     order: 0;
-    width: 100%; /* Sørg for, at billedet fylder hele kolonnens bredde */
-    height: 100%; /* Sørg for, at billedet fylder hele kolonnens højde */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -808,5 +786,29 @@ main ul {
   }
   .cv-section3 h2 {
     text-align: center;
+  }
+}
+@media (min-width: 990px) {
+  /* FORSIDE PROJEKTER */
+  .projekt-section h2 {
+    text-align: center;
+  }
+
+  .grid_1-1_til_1-1-1-1 {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 40px 0px 100px;
+    gap: 0px;
+  }
+
+  .grid_1-1_til_1-1-1-1 .projekt {
+    border-right: 2px solid var(--primary-color);
+  }
+
+  .grid_1-1_til_1-1-1-1 .projekt:last-child {
+    border-right: none;
+  }
+
+  .projekt img {
+    padding: 20px;
   }
 }
